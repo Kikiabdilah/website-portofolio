@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+
+
+:root {
+  --primaryTextcolor: #232e35;
+  /* judul */
+  --secondaryTextcolor: #656d72;
+  /* Paragraf */
+
+  --borderColor: #f1f1f1;
+  --lineColor: #d9d9d9;
+
+  --primaryBackgroudColor: #fff;
+  --secondaryBackgroundColor: #fbfbfb;
+  --thirdBackgroundColor: #f5f3fe;
+
+  --primaryIconColor: #d13925;
+  --primaryIconColorHover: #ff8f7b;
+
+  --sectionPadding: 6rem 0;
+
+  --itemBorderRadius: 0.7rem;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  color: var(--primaryTextcolor);
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.9rem;
+}
+
+
+p,
+span,
+label,
+input,
+textarea,
+li {
+  color: var(--secondaryTextcolor);
+}
+
+a {
+  text-decoration: none;
+}
