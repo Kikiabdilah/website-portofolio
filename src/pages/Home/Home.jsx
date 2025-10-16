@@ -10,7 +10,7 @@ const Home = () => {
                         <h3 className="pre-title">My Name Is</h3>
                         <h1 className="hero-name">Muhamad Rizky <span>Abdilah</span></h1>
                         {/* <p>My Portofolio Website</p> */}
-                        <img src="/src/assets/img/hero1.jpeg" alt="Hero" />
+                        <img src="assets/img/hero1.jpeg" alt="Hero" />
                     </div>
                     <div className="hero-right">
                         <div className="box">
