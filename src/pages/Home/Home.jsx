@@ -1,6 +1,25 @@
+import { useState } from 'react'
 import './Home.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faArrowAltCircleRight, faLink } from '@fortawesome/free-solid-svg-icons'
+import { hasilProyek } from '../Portofolio/data'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
+    const [selectedProject, setSelectedProject] = useState(null)
+    const [isModalOpen, setIsModalOpen] = useState(false)
+
+    const openModal = (proyek) => {
+        setSelectedProject(proyek)
+        setIsModalOpen(true)
+    }
+
+    const closeModal = () => {
+        setSelectedProject(null)
+        setIsModalOpen(false)
+    }
+
     return (
         <>
             <div className='main-container'>
@@ -9,8 +28,6 @@ const Home = () => {
                     <div className="hero-left">
                         <h3 className="pre-title">My Name Is</h3>
                         <h1 className="hero-name">Muhamad Rizky <span>Abdilah</span></h1>
-                        {/* <p>My Portofolio Website</p> */}
-                        <img src="assets/img/hero1.jpeg" alt="Hero" />
                     </div>
                     <div className="hero-right">
                         <div className="box">
@@ -38,6 +55,57 @@ const Home = () => {
                     </div>
                 </section>
             </div>
+
+            {/* Portofolio section (dipindahkan dari Portofolio.jsx) */}
+            <section id="portofolio">
+                <div className="Portofolio">
+                    <div className="portofolio-container">
+                        {hasilProyek.map((proyek) => (
+                            <div className="portofolio-cover" key={proyek.id}>
+                                <img src={proyek.image} alt={`Proyek ${proyek.id}`} />
+                                <div className="portofolio-info">
+                                    <h4>{proyek.title}</h4>
+                                    <button className="btn" onClick={() => openModal(proyek)}>
+                                        <FontAwesomeIcon icon={faArrowAltCircleRight} />
+                                    </button>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                {isModalOpen && selectedProject && (
+                    <div className="modal-overlay" onClick={closeModal}>
+                        <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+                            <div className="modal-content-left">
+                                <button className="modal-close" onClick={closeModal}>×</button>
+                                <img src={selectedProject.image} alt={`Proyek ${selectedProject.id}`} />
+                                <h4>{selectedProject.title}</h4>
+                            </div>
+                            <div className="modal-content-right">
+                                <p>{selectedProject.deskripsi}</p>
+                                <h3>
+                                    Teknologi yang digunakan:  <span>
+                                        {selectedProject.bahasa}
+                                    </span>
+                                </h3>
+                                <div className="button-container">
+                                    <a href={selectedProject.link} target="_blank" rel="noopener noreferrer">
+                                        <button className='btn'>
+                                            <FontAwesomeIcon icon={faLink} />
+                                        </button>
+                                    </a>
+                                    <a href={selectedProject.github} target="_blank" rel="noopener noreferrer">
+                                        <button className='btn'>
+                                            <FontAwesomeIcon icon={faGithub} />
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                )}
+            </section>
         </>
     )
 }

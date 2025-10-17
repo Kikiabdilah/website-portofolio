@@ -21,7 +21,7 @@ const Portofolio = () => {
     };
 
     return (
-        <>
+        <section>
             <div className="Portofolio">
                 <div className="portofolio-container">
                     {hasilProyek.map((proyek) => (
@@ -69,7 +69,7 @@ const Portofolio = () => {
                     </div>
                 </div>
             )}
-        </>
+        </section>
     );
 };
 

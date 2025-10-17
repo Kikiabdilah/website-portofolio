@@ -13,12 +13,8 @@ const Footer = () => {
                 <div className="footer-left">
                     <p>
 
-                        <a href="mailto:kiensa1234@gmail.com"><FontAwesomeIcon icon={faEnvelope} /> kiensa1234@gmail.com</a></p>
-                    <p>
-                        <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">
-                            <FontAwesomeIcon icon={faWhatsapp} /> 081380129788
-                        </a> </p>
-
+                        <a href="mailto:kiensa1234@gmail.com"><FontAwesomeIcon icon={faEnvelope} /> kiensa1234@gmail.com</a>
+                    </p>
                 </div>
 
                 <div className="footer-right">
