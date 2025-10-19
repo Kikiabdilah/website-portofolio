@@ -13,11 +13,11 @@ const Navbar = () => {
                     <div className='navbar'>
                         <ul>
                             <li>
-                                <Link to="/">Home</Link></li>
+                                <a href="#home">Home</a></li>
                             <li>
                                 <a href="#portofolio">Portofolio</a></li>
                             <li>
-                                <Link to="Skills">Skills</Link>
+                                <a href="#skills">Skills</a>
                             </li>
                             <li>
                                 <Link to="/CV.pdf" target="_blank" rel="noopener noreferrer">

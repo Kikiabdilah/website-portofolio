@@ -64,8 +64,7 @@ const Home = () => {
     return (
         <>
             <div className='main-container'>
-
-                <section id="hero">
+                <section id="home">
                     <div className="hero-left">
                         <h3 className="pre-title">My Name Is</h3>
                         <h1 className="hero-name">Muhamad Rizky <span>Abdilah</span></h1>
@@ -98,6 +97,9 @@ const Home = () => {
             </div>
 
             <section id="portofolio">
+                <div className="portofolio-header">
+                    <h1 className="portofolio-title">Portofolio</h1>
+                </div>
                 <div className="Portofolio">
                     <div className="portofolio-container">
                         {hasilProyek.map((proyek) => (
@@ -147,7 +149,7 @@ const Home = () => {
                 )}
             </section>
 
-           <section className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 py-20 px-4">
+           <section className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 py-20 px-4" id='skills'>
             <div className="max-w-6xl mx-auto">
                 {/* Header */}
                 <div className="text-center mb-16">
