@@ -68,6 +68,11 @@ img {
     box-sizing: border-box;
   }
 }
+@media (max-width:768px) {
+    .main-container {
+        margin-top: 40px;
+    }
+}
 @media (max-width: 700px) {
   #home {
     grid-template-columns: 1fr;
