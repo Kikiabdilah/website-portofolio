@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Taruh custom CSS SETELAH Tailwind */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
 
 :root {
